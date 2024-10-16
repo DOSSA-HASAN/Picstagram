@@ -1,34 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.displaye-none{
+:root {
+    color-scheme: light dark;
+}
+
+.displaye-none {
     display: none;
 }
 
-.login-form, .signup-instead-cont{
+.login-form,
+.signup-instead-cont {
     width: 325px;
-    border: 1px solid hsl(0, 0%, 86%, 1);
+    border: 1px solid light-dark(#dbdbdb, #333333);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 15px;
     position: relative;
+    background-color: light-dark(#fff, #121212);
 }
 
-.login-form > input{
+.login-form>input {
     width: 90%;
     padding: 7px;
-    margin: 2px 0;
-    /* background-color: rgb(235, 232, 232); */
+    margin: 5px 0;
+    background-color: light-dark(transparent, #1F1F1F);
     border-radius: 2px;
-    border: 1px solid hsl(0, 0%, 86%, 1);
+    border: 1px solid light-dark(#dbdbdb, #333333);
     outline: none;
 }
 
-.login-btn{
+.login-btn {
     width: 95%;
     text-align: center;
     padding: 7px;
@@ -40,7 +46,7 @@
     margin-top: 15px;
 }
 
-.auth-logo{
+.auth-logo {
     width: 50%;
     margin: 30px 0;
     display: flex;
@@ -49,7 +55,7 @@
     align-items: center;
 }
 
-.auth-logo > p{
+.auth-logo>p {
     font-weight: 600;
     text-align: center;
     width: 150%;
@@ -57,27 +63,27 @@
     color: rgb(115, 115, 115, 1);
 }
 
-.auth-logo > img{
+.auth-logo>img {
     width: 100%;
 }
 
-.signup-instead-cont{
+.signup-instead-cont {
     width: 325px;
     padding: 20px 15px;
     margin: 10px 0;
 }
 
-.signup-instead-cont > a{
-    color: hsl(0, 0%, 0%, 0.4);
+.signup-instead-cont>a {
+    color: light-dark(#00000066, #fff);
     text-decoration: none;
     font-weight: 500;
 }
 
-.signup-instead-cont > a > p > span{
-    color: #3797EF;
+.signup-instead-cont>a>p>span {
+    color: light-dark(#3797EF, #125CC2);
 }
 
-.policies{
+.policies {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,17 +92,18 @@
     margin: 10px 0;
 }
 
-.policies > p{
+.policies>p {
     font-size: 0.8rem;
-    color: rgb(115, 115, 115, 1);
+    color: #737373;
     margin: 10px 0;
 }
-.policies > p > a{
+
+.policies>p>a {
     text-decoration: none;
-    color: rgb(0, 55, 107, 1);
+    color: light-dark(rgb(0, 55, 107, 1), #125CC2);
 }
 
-.error-cont{
+.error-cont {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -107,27 +114,27 @@
     text-align: center;
 }
 
-.error-title{
+.error-title {
     color: #000;
     font-weight: 600;
     padding: 20px 0;
 }
 
-.error-mssg{
+.error-mssg {
     font-size: 0.9rem;
     color: rgb(177, 177, 177);
     width: 90%;
     margin: 0 auto;
 }
 
-.h-r{
+.h-r {
     width: 100%;
     height: 1px;
     background-color: rgb(177, 177, 177);
     margin: 20px 0;
 }
 
-.error-cont > .dismiss-error-btn{
+.error-cont>.dismiss-error-btn {
     color: #3797EF;
     background-color: transparent;
     border: none;
