@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.displaye-none{
+    display: none;
+}
+
+.login-form, .signup-instead-cont{
+    width: 325px;
+    border: 1px solid hsl(0, 0%, 86%, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px;
+    position: relative;
+}
+
+.login-form > input{
+    width: 90%;
+    padding: 7px;
+    margin: 2px 0;
+    /* background-color: rgb(235, 232, 232); */
+    border-radius: 2px;
+    border: 1px solid hsl(0, 0%, 86%, 1);
+    outline: none;
+}
+
+.login-btn{
+    width: 95%;
+    text-align: center;
+    padding: 7px;
+    background-color: #3797EF;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.auth-logo{
+    width: 50%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-logo > p{
+    font-weight: 600;
+    text-align: center;
+    width: 150%;
+    margin: 10px 0;
+    color: rgb(115, 115, 115, 1);
+}
+
+.auth-logo > img{
+    width: 100%;
+}
+
+.signup-instead-cont{
+    width: 325px;
+    padding: 20px 15px;
+    margin: 10px 0;
+}
+
+.signup-instead-cont > a{
+    color: hsl(0, 0%, 0%, 0.4);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-instead-cont > a > p > span{
+    color: #3797EF;
+}
+
+.policies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.policies > p{
+    font-size: 0.8rem;
+    color: rgb(115, 115, 115, 1);
+    margin: 10px 0;
+}
+.policies > p > a{
+    text-decoration: none;
+    color: rgb(0, 55, 107, 1);
+}
+
+.error-cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    background-color: hsl(0, 4%, 97%, 1);
+    /* padding: 20px 10px; */
+    text-align: center;
+}
+
+.error-title{
+    color: #000;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+.error-mssg{
+    font-size: 0.9rem;
+    color: rgb(177, 177, 177);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.h-r{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(177, 177, 177);
+    margin: 20px 0;
+}
+
+.error-cont > .dismiss-error-btn{
+    color: #3797EF;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
