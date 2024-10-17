@@ -21,7 +21,7 @@ function UserContex({ children }) {
                     //check for docs existence
                     if(userDocSnapshot.exists()){
                         setUser(userDocSnapshot.data())
-                        console.log(userDocSnapshot.data())
+                        // console.log(userDocSnapshot.data())
                     }
                     else{
                         console.log("Doc not found")
@@ -41,8 +41,31 @@ function UserContex({ children }) {
 
     }, [user])
 
+    // check if device theme is dark or light
+    const [isDarkMode, setIsDarkMode] = useState(false)
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+        setIsDarkMode(mediaQuery.matches)
+
+        //listener to handle theme change
+        const handleThemeChange = (e) => {
+            setIsDarkMode(e.matches)
+        }
+
+        //attach event listener
+        mediaQuery.addEventListener('change', handleThemeChange)
+
+        //cleanup
+        return () => {
+            mediaQuery.removeEventListener('change', handleThemeChange);
+        }
+    }, [])
+
+
     return (
-        <uContext.Provider value={{user, setUser}}>
+        <uContext.Provider value={{user, setUser, isDarkMode}}>
             { children }
         </uContext.Provider>
     )

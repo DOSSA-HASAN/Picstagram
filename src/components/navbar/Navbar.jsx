@@ -1,18 +1,19 @@
 import React, { useContext } from 'react'
-import Logo from '../../assets/logo.png'
+import LogoLightTheme from '../../assets/logoLightTheme.png'
+import LogoDarkTheme from '../../assets/logoDarkTheme.png'
 import '../navbar/navbar.css'
 import { Link } from 'react-router-dom'
 import { uContext } from '../../contex/UserContex'
 
 function Navbar() {
 
-    const { user } = useContext(uContext)
+    const { user, isDarkMode } = useContext(uContext)
 
     return (
         <>
             <nav className='navigation'>
                 <figure className='logo-cont'>
-                    <img src={Logo} className='logo'/>
+                    <img src={isDarkMode ? LogoDarkTheme : LogoLightTheme} className='logo'/>
                 </figure>
 
                 <div className="nav-links">

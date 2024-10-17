@@ -44,6 +44,7 @@
     color: #fff;
     font-weight: 500;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .auth-logo {
@@ -109,13 +110,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    background-color: hsl(0, 4%, 97%, 1);
-    /* padding: 20px 10px; */
+    background-color: light-dark(#f8f7f7, #121212);
     text-align: center;
+    border: 1px solid light-dark(#dbdbdb, #333333);
 }
 
 .error-title {
-    color: #000;
+    color: light-dark(#000, #fff);
     font-weight: 600;
     padding: 20px 0;
 }
@@ -141,4 +142,5 @@
     font-size: 1rem;
     margin: 0 0 20px 0;
     font-weight: 600;
+    cursor: pointer;
 }
