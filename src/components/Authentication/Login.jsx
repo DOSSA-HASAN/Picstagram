@@ -12,7 +12,7 @@ import { doc, getDoc } from 'firebase/firestore'
 function Login() {
 
     //global user data
-    const { user, setUser, isDarkMode } = useContext(uContext)
+    const { user, setUser, isDarkMode, directToSignup, setDirectToSignup } = useContext(uContext)
 
     //variable to store users number / username / email
     const [account, setAccount] = useState("")
@@ -72,7 +72,7 @@ function Login() {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
 
             <section className='login-section'>
                 <form onSubmit={handleLogin} className='login-form'>
@@ -110,7 +110,7 @@ function Login() {
                 </form>
 
                 <div className="signup-instead-cont">
-                    <Link to={'/signup'}><p>Don't have an account? <span>Sign up</span></p></Link>
+                    <Link onClick={() => setDirectToSignup(true)} to={'/signup'}><p>Don't have an account? <span>Sign up</span></p></Link>
                 </div>
             </section>
         </>

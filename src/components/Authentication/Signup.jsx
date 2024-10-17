@@ -11,7 +11,7 @@ import { uContext } from '../../contex/UserContex'
 function Signup() {
 
     //gloabl user information like email.
-    const { user, setUser, isDarkMode} = useContext(uContext)
+    const { user, setUser, isDarkMode } = useContext(uContext)
 
     const naviagteToLogin = useNavigate();
 
@@ -70,10 +70,10 @@ function Signup() {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
 
             <section className='signup-section'>
-                <form onSubmit={handleSubmit} className='login-form'>
+                <form onSubmit={handleSubmit} className='login-form signup-form'>
 
                     <div className={`${errorMssg ? 'error-cont' : 'displaye-none'}`}>
 

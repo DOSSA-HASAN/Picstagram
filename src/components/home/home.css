@@ -1,0 +1,24 @@
+:root {
+    color-scheme: light dark;
+}
+
+.home-login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: light-dark(#fff, #000);
+}
+
+.demo-app-img{
+    width: 450px;
+}
+
+.demo-app-img > img{
+    width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+    .demo-app-img{
+        display: none;
+    }
+}
