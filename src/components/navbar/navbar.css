@@ -9,14 +9,15 @@
 }
 
 .navigation {
-    width: 190px;
+    width: 210px;
     border-right: 1px solid light-dark(#dbdbdb, #262626);
-    padding: 10px 18px;
+    padding: 10px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: light-dark(#fff, #000);
+    height: 100%;
 }
 
 .logo-cont {
@@ -25,11 +26,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 0 10px;
+    margin: 0 0 0 12px;
 }
 
 .logo-cont>a>.logo {
-    width: 49.5%;
+    width: 51%;
 
 }
 
@@ -41,7 +42,7 @@
     align-items: flex-start;
     margin-top: 10px;
     width: 100%;
-    padding: 8px 12px 20px;
+    padding: 8px 10px 15px;
 
 }
 
@@ -51,7 +52,7 @@
     justify-content: left;
     align-items: center;
     text-decoration: none;
-    margin: 4px 0;
+    margin: 10px 0 0 0;
     padding: 11px 50px 11px 10px;
     width: 70%;
 }
@@ -59,13 +60,13 @@
 
 .nav-links>a>i,
 .more-cont>a>i {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: light-dark(#000, #fff);
 }
 
 .nav-links>a>.link-text,
 .more-cont>a>.link-text {
-    font-size: 0.96rem;
+    font-size: 1.03rem;
     color: light-dark(#000, #fff);
     font-weight: 100;
     margin-left: 15px;
@@ -75,6 +76,7 @@
 .nav-links>a:hover,
 .more-cont>a:hover {
     background-color: light-dark(#000, #262626);
+    border-radius: 5px;
 }
 
 .mini-logo-cont {
