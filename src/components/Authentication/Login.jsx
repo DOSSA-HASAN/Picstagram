@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import Navbar from '../navbar/Navbar'
 import LogoLightTheme from '../../assets/logoLightTheme.png'
 import LogoDarkTheme from '../../assets/logoDarkTheme.png'
 import { Link, useNavigate } from 'react-router-dom'
