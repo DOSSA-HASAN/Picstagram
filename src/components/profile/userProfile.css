@@ -1,0 +1,99 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    background-color: light-dark(#fff, #000);
+}
+
+.user-info-cont {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0px 0px 30px;
+    padding: 30px 20px 0px;
+    margin: 0 auto;
+}
+
+.user-profile-section {
+    width: 100%;
+    background-color: light-dark(#fff, #000);
+    min-height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.profile-picture-cont {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid light-dark(#dbdbdb, #262626);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px 0 0;
+}
+
+.profile-picture-cont>img {
+    width: 100%;
+}
+
+.profile-picture-cont>i {
+    font-size: 5rem;
+}
+
+.username-and-account-settings-btn-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 150px 0 0;
+}
+
+.profile-username {
+    font-weight: 400;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-profile-btn,
+.view-archive-btn {
+    padding: 7px 16px;
+    border: none;
+    text-align: center;
+    background-color: light-dark(hsl(0, 0%, 94%), hsl(0, 0%, 21%));
+    font-size: 0.9rem;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.edit-profile-btn:hover,
+.view-archive-btn:hover{
+    background-color: light-dark(hsl(0, 0%, 90%), hsl(0, 0%, 7%));
+} 
+
+.username-and-account-settings-btn-cont>i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.following-and-followers-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 20px 0;
+}
+
+.following-and-followers-cont > p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.following-and-followers-cont > p > .count{
+    font-weight: 600;
+}

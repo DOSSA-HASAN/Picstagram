@@ -30,13 +30,13 @@
 }
 
 @media screen and (max-width: 425px) {
-    .section-flex{
-        flex-direction: column-reverse;
+    /* .section-flex{
+        flex-direction: column;
         justify-content: center;
         height: 100vh;
-    }
-    section{
+    } */
+    /* section{
         background-color: red;
         height: 100vh;
-    }
+    } */
 }
