@@ -95,7 +95,7 @@
         padding: 8px 0px;
     }
 
-    .navigation>.mini-logo-cont{
+    .navigation>.mini-logo-cont {
         margin: 20px 0;
     }
 
@@ -129,4 +129,37 @@
     .more-cont>a>.link-text {
         display: none;
     }
+}
+
+@media screen and (max-width: 425px) {
+
+    .navigation {
+        width: 100%;
+        min-height: 10px;
+        padding: 0;
+    }
+
+    .navigation > .mini-logo-cont{
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links > a:nth-of-type(2), .nav-links > a:nth-of-type(6){
+        display: none;
+        visibility: hidden;
+    }
+
+    .more-cont {
+        display: none;
+    }
+
+
 }

@@ -17,8 +17,26 @@
     width: 95%;
 }
 
+.section-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media screen and (max-width: 768px) {
     .demo-app-img{
         display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .section-flex{
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 100vh;
+    }
+    section{
+        background-color: red;
+        height: 100vh;
     }
 }
