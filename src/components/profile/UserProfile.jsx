@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Navbar from '../navbar/Navbar'
 import { uContext } from '../../contex/UserContex'
 import './userProfile.css'
+import { Link } from 'react-router-dom'
 
 function UserProfile() {
 
@@ -19,34 +20,38 @@ function UserProfile() {
                         //         <img src={user.profilePic} alt="" srcset="" />
                         //     </div>
                         //     :
-                        
-                            <div className="profile-picture-cont">
-                                <i className="fa-solid fa-user"></i>
-                            </div>
+
+                        <div className="profile-picture-cont">
+                            <i className="fa-solid fa-user"></i>
+                        </div>
                     }
 
                     <article className="users-info">
                         <div className="username-and-account-settings-btn-cont">
-                            <p className="profile-username">{user ? user.username : ''}</p>
+                            <button className="profile-username">{user ? user.username : 'Instagram user'}</button>
                             <button className="edit-profile-btn">Edit profile</button>
                             <button className="view-archive-btn">View archive</button>
                             <i className="fa-solid fa-gear"></i>
                         </div>
 
                         <div className="following-and-followers-cont">
-                            <p><span className='count'>0</span> posts</p>
-                            <p><span className='count'>0</span> followers</p>
-                            <p><span className='count'>0</span> following</p>
+                            <button><span className='count'>0</span> posts</button>
+                            <button><span className='count'>0</span> followers</button>
+                            <button><span className='count'>0</span> following</button>
                         </div>
 
                         <div className="user-bio-cont">
-                            
+                            {user ? <p className='user-fullname'>{user.fullName}</p> : 'Instagram user'}
                         </div>
                     </article>
                 </main>
 
-                <figure className="users-posts">
-
+                <figure className='user-posts-saved-tagged'>
+                    <div className="titles">
+                        <Link to={'/'}><i className="fa-solid fa-table-cells"></i><p>POSTS</p></Link>
+                        <Link to={'/'}><i className="fa-regular fa-bookmark"></i><p>SAVED</p></Link>
+                        <Link to={'/'}><i className="fa-solid fa-users-rectangle"></i><p>TAGGED</p></Link>
+                    </div>
                 </figure>
             </section>
         </div>
