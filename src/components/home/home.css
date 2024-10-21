@@ -2,41 +2,42 @@
     color-scheme: light dark;
 }
 
-.home-login-section{
+.home-login-section {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: light-dark(#fff, #000);
 }
 
-.demo-app-img{
+.demo-app-img {
     width: 450px;
 }
 
-.demo-app-img > img{
+.demo-app-img>img {
     width: 95%;
 }
 
-.section-flex{
+.section-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 @media screen and (max-width: 768px) {
-    .demo-app-img{
+    .demo-app-img {
         display: none;
     }
 }
 
 @media screen and (max-width: 425px) {
-    /* .section-flex{
-        flex-direction: column;
+    .section-flex {
+        flex-direction: column-reverse;
         justify-content: center;
-        height: 100vh;
-    } */
-    /* section{
+        /* height: 100vh; */
+    }
+
+    section {
         background-color: red;
-        height: 100vh;
-    } */
+        /* height: 100vh; */
+    }
 }

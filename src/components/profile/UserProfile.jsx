@@ -46,12 +46,35 @@ function UserProfile() {
                     </article>
                 </main>
 
+                <article className='highlights'>
+                    <figure className="highlights-cont">
+                        <div className="create-highlight-cont">
+                            <button className="add-highlight-btn-cont">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <p>New</p>
+                    </figure>
+                </article>
+
                 <figure className='user-posts-saved-tagged'>
                     <div className="titles">
                         <Link to={'/'}><i className="fa-solid fa-table-cells"></i><p>POSTS</p></Link>
                         <Link to={'/'}><i className="fa-regular fa-bookmark"></i><p>SAVED</p></Link>
                         <Link to={'/'}><i className="fa-solid fa-users-rectangle"></i><p>TAGGED</p></Link>
                     </div>
+
+                    <figure className="content">
+                        {/* if the user doesnt have any posts this will show */}
+
+                        <div className="no-content-alternative-cont">
+                            <i class="fa-solid fa-camera"></i>
+                            <h1>Share Photos</h1>
+                            <p>When you share photos, they will appear on your profile.</p>
+                            <button>Share your first photo</button>
+                        </div>
+
+                    </figure>
                 </figure>
             </section>
         </div>
