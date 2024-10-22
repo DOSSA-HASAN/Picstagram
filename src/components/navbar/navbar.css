@@ -18,6 +18,10 @@
     flex-direction: column;
     background-color: light-dark(#fff, #000);
     min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 .logo-cont {
@@ -134,9 +138,12 @@
 @media screen and (max-width: 425px) {
 
     .navigation {
-        width: 100%;
-        min-height: 10px;
-        padding: 0;
+        width: 100vw;
+        min-height: 20px;
+        position: relative;
+        margin: 0 auto;
+        padding: 8px 0;
+        border: none;
     }
 
     .navigation > .mini-logo-cont{
