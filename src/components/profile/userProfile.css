@@ -6,23 +6,26 @@ body {
     background-color: light-dark(#fff, #000);
 }
 
-.user-info-cont {
+.user-profile-section {
+    width: 90vw;
+    background-color: light-dark(#fff, #000);
+    min-height: 100vh;
     display: flex;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: right;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 0 0 0 auto;
+}
+
+.user-info-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 30px 20px 0px;
     margin: 5px auto 0;
 }
 
-.user-profile-section {
-    width: 100%;
-    background-color: light-dark(#fff, #000);
-    min-height: 100vh;
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    flex-direction: column;
-}
 
 .profile-picture-cont {
     width: 150px;
@@ -33,7 +36,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 100px 0 0;
+    margin: 0 80px 0 0;
     cursor: pointer;
 }
 
@@ -85,15 +88,17 @@ body {
     margin-left: 5px;
 }
 
-.following-and-followers-cont {
+.following-and-followers-cont,
+.following-and-followers-cont-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
-.following-and-followers-cont>button {
+.following-and-followers-cont>button,
+.following-and-followers-cont-mobile>button {
     font-size: 1rem;
     font-weight: 400;
     border: none;
@@ -113,10 +118,9 @@ body {
 .user-posts-saved-tagged {
     border-top: 1px solid light-dark(#dbdbdb, #262626);
     /* background-color: rebeccapurple; */
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
     min-height: 100%;
-    overflow-y: scroll;
     padding: 15px 20px 0px;
 }
 
@@ -141,16 +145,16 @@ body {
     padding: 0 10px;
 }
 
-.highlights{
+.highlights {
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
-    padding: 55px 0;
+    padding: 60px 0;
 }
 
-.highlights-cont{
+.highlights-cont {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -225,12 +229,24 @@ body {
     cursor: pointer;
 }
 
+.username-and-account-settings-btn-cont-mobile,
+.user-bio-cont-mobile,
+.following-and-followers-cont-mobile {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
+
+    .user-profile-section {
+        width: 90vw;
+    }
+
     .user-info-cont {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         padding: 30px 50px;
+        padding: 0;
         margin: 5px auto 0 auto;
         width: 100%;
     }
@@ -239,11 +255,136 @@ body {
         margin: 0;
     }
 
-    .profile-picture-cont{
+    .profile-picture-cont {
         margin: 0 50px 0 0;
     }
 
     .following-and-followers-cont {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .username-and-account-settings-btn-cont {
+        border: 1px solid yellow;
+        background-color: red;
+    }
+
+    .username-and-account-settings-btn-cont,
+    .user-bio-cont,
+    .following-and-followers-cont,
+    .username-and-account-settings-btn-cont,
+    .following-and-followers-cont,
+    .user-posts-saved-tagged>.titles>a>p  {
+        display: none;
+    }
+
+
+
+    .user-info-cont {
+        /* padding: 30px 20px 0; */
+        /* margin: 5px auto 0; */
+    }
+
+    .user-profile-section {
+        width: 100vw;
+    }
+
+    .profile-picture-cont {
+        width: 70px;
+        height: 70px;
+        margin: 0 20px 0 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-picture-cont>i {
+        font-size: 3rem;
+    }
+
+    .username-and-account-settings-btn-cont-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        margin: 0 0 0 20px;
+    }
+
+    .username-and-account-settings-btn-cont-mobile>span {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        font-size: 1.3rem;
+
+    }
+
+    .username-and-account-settings-btn-cont-mobile>span:first-of-type {
+        padding: 10px 0;
+    }
+
+    .username-and-account-settings-btn-cont-mobile>span:first-of-type i {
+        margin-left: 10px;
+    }
+
+    .username-and-account-settings-btn-cont-mobile:nth-child(2)>span>button {
+        margin: 0 0 0 20px;
+    }
+
+    .user-bio-cont-mobile {
+        display: block;
+        width: 95%;
+        margin: 30px 0 0 0;
+    }
+
+    .following-and-followers-cont-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid light-dark(#dbdbdb, #262626);
+    }
+
+    .following-and-followers-cont-mobile>button {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: light-dark(#000, #a8a8a8);
+
+    }
+
+    .following-and-followers-cont-mobile>button>.count {
+        color: light-dark(#000, #fff);
+    }
+
+    .user-posts-saved-tagged {
+        padding: 20px 0;
+    }
+
+    .highlights {
+        padding: 30px 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .highlights-cont {
+        padding: 0 15px;
+    }
+
+    .add-highlight-btn-cont {
+        padding: 15px;
+    }
+
+    .add-highlight-btn-cont>i {
+        font-size: 2rem;
+    }
+
+    .user-posts-saved-tagged>.titles>a>i{
+        font-size: 1.3rem;
+        
     }
 }

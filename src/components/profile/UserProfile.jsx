@@ -14,17 +14,9 @@ function UserProfile() {
 
             <section className="user-profile-section">
                 <main className="user-info-cont">
-                    {
-                        // user ?
-                        //     <div className="profile-picture-cont">
-                        //         <img src={user.profilePic} alt="" srcset="" />
-                        //     </div>
-                        //     :
-
-                        <div className="profile-picture-cont">
-                            <i className="fa-solid fa-user"></i>
-                        </div>
-                    }
+                    <div className="profile-picture-cont">
+                        <i className="fa-solid fa-user"></i>
+                    </div>
 
                     <article className="users-info">
                         <div className="username-and-account-settings-btn-cont">
@@ -32,6 +24,17 @@ function UserProfile() {
                             <button className="edit-profile-btn">Edit profile</button>
                             <button className="view-archive-btn">View archive</button>
                             <i className="fa-solid fa-gear"></i>
+                        </div>
+
+                        <div className="username-and-account-settings-btn-cont-mobile">
+                            <span>
+                                <button className="profile-username">{user ? user.username : 'Instagram user'}</button>
+                                <i className="fa-solid fa-gear"></i>
+                            </span>
+                            <span>
+                                <button className="edit-profile-btn">Edit profile</button>
+                                <button className="view-archive-btn">View archive</button>
+                            </span>
                         </div>
 
                         <div className="following-and-followers-cont">
@@ -46,6 +49,10 @@ function UserProfile() {
                     </article>
                 </main>
 
+                <div className="user-bio-cont-mobile">
+                    {user ? <p className='user-fullname'>{user.fullName}</p> : 'Instagram user'}
+                </div>
+
                 <article className='highlights'>
                     <figure className="highlights-cont">
                         <div className="create-highlight-cont">
@@ -56,6 +63,12 @@ function UserProfile() {
                         <p>New</p>
                     </figure>
                 </article>
+
+                <div className="following-and-followers-cont-mobile">
+                    <button><span className='count'>0</span> posts</button>
+                    <button><span className='count'>0</span> followers</button>
+                    <button><span className='count'>0</span> following</button>
+                </div>
 
                 <figure className='user-posts-saved-tagged'>
                     <div className="titles">
