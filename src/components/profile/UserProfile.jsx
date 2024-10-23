@@ -65,9 +65,16 @@ function UserProfile() {
                 </article>
 
                 <div className="following-and-followers-cont-mobile">
-                    <button><span className='count'>0</span> posts</button>
-                    <button><span className='count'>0</span> followers</button>
-                    <button><span className='count'>0</span> following</button>
+                    <div>
+                        <button><span className='count'>0</span> posts</button>
+                        <button><span className='count'>0</span> followers</button>
+                        <button><span className='count'>0</span> following</button>
+                    </div>
+                    <div className="titles">
+                        <Link to={'/'}><i className="fa-solid fa-table-cells"></i></Link>
+                        <Link to={'/'}><i className="fa-regular fa-bookmark"></i></Link>
+                        <Link to={'/'}><i className="fa-solid fa-users-rectangle"></i></Link>
+                    </div>
                 </div>
 
                 <figure className='user-posts-saved-tagged'>
