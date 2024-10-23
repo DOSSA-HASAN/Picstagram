@@ -18,7 +18,7 @@
     flex-direction: column;
     background-color: light-dark(#fff, #000);
     min-height: 100vh;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 9999;
@@ -138,10 +138,10 @@
 @media screen and (max-width: 425px) {
 
     .navigation {
-        width: 100vw;
+        width: 100%;
         min-height: 20px;
         position: relative;
-        margin: 0 auto;
+        margin: 0;
         padding: 8px 0;
         border: none;
     }
